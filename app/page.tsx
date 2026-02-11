@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckCircle, Shield, Sparkles, Timer, Wrench, MapPin, Phone } from "lucide-react"
+import { CheckCircle, Shield, Sparkles, Timer, Wrench, MapPin, Phone, Bus } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
@@ -43,9 +43,8 @@ export default function Home() {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
           >
             <video
               src={slide}
@@ -143,33 +142,15 @@ export default function Home() {
           <div className="flex items-center gap-2 group">
             <div className="animate-bounce">
               <Image
-                src="https://i.ibb.co/LhpNL5GQ/Imagen-de-Whats-App-2025-03-07-a-las-21-19-11-767019f8-Photoroom.png"
+                src="/macleanhero.jpeg"
                 alt="Maclean Logo"
                 width={40}
                 height={40}
                 className="rounded-md"
               />
             </div>
-            <span className="text-xl font-bold relative overflow-hidden">
-              <span className="inline-block animate-wave">M</span>
-              <span className="inline-block animate-wave" style={{ animationDelay: "0.05s" }}>
-                a
-              </span>
-              <span className="inline-block animate-wave" style={{ animationDelay: "0.1s" }}>
-                c
-              </span>
-              <span className="inline-block animate-wave" style={{ animationDelay: "0.15s" }}>
-                l
-              </span>
-              <span className="inline-block animate-wave" style={{ animationDelay: "0.2s" }}>
-                e
-              </span>
-              <span className="inline-block animate-wave" style={{ animationDelay: "0.25s" }}>
-                a
-              </span>
-              <span className="inline-block animate-wave" style={{ animationDelay: "0.25s" }}>
-                n
-              </span>
+            <span className="text-sm sm:text-lg md:text-xl font-bold whitespace-nowrap">
+              MACLEAN LIMPIEZA DE TAPIZADOS
             </span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
@@ -310,9 +291,7 @@ export default function Home() {
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl animate-fade-in-down">
               Servicio de limpieza, desinfección y blindaje de tapizados de hogar y automotriz
             </h1>
-            <p className="mt-6 max-w-2xl text-lg animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              En Maclean nos dedicamos a dejar su vehículo impecable con los mejores productos y técnicas profesionales.
-            </p>
+
             <div
               className="mt-10 flex flex-wrap justify-center gap-4 animate-fade-in"
               style={{ animationDelay: "0.6s" }}
@@ -379,18 +358,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold tracking-tight">Quiénes Somos</h2>
                 <div className="w-20 h-1 bg-sky-500 animate-width"></div>
                 <p className="text-lg text-gray-600">
-                  Maclean nació en 2021 con una misión clara: revolucionar la forma en que las personas cuidan sus
-                  vehículos. Somos un equipo de profesionales apasionados por los autos y obsesionados con la limpieza y
-                  el detalle.
-                </p>
-                <p className="text-lg text-gray-600">
-                  Nuestra filosofía se basa en tres pilares fundamentales: calidad en los productos que utilizamos,
-                  excelencia en el servicio que brindamos y respeto por el medio ambiente en cada uno de nuestros
-                  procesos.
-                </p>
-                <p className="text-lg text-gray-600">
-                  Hemos atendido miles de vehículos, desde autos familiares hasta vehículos de lujo y colección, siempre
-                  con el mismo nivel de dedicación y profesionalismo.
+                  En Maclean, nos especializamos en limpieza de tapizados de hogar y automotriz, blindaje de tapizados y atención a empresas. Contamos con productos de alta calidad, maquinaria profesional y un equipo calificado para cada servicio. Nuestra excelencia se refleja en nuestra calificación de 5 estrellas en Google, con más de 300 reseñas de clientes satisfechos. Cada proyecto lo abordamos con un enfoque profesional, personalizado y resultados impecables.
                 </p>
               </div>
             </div>
@@ -433,7 +401,7 @@ export default function Home() {
                     <path d="M4 12h16" />
                     <path d="M12 4v16" />
                   </svg>
-                  <CardTitle>Limpieza de Muebles</CardTitle>
+                  <CardTitle>Limpieza de tapizados de hogar</CardTitle>
                   <CardDescription>Restauración y limpieza profesional</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -458,36 +426,7 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              <Card
-                className="animate-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-sky-400 group"
-                style={{ transitionDelay: "0.1s" }}
-              >
-                <CardHeader>
-                  <Sparkles className="h-10 w-10 text-sky-500 mb-2 group-hover:animate-spin" />
-                  <CardTitle>Limpieza basica de Tapizados</CardTitle>
-                  <CardDescription>Interior y exterior impecables</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 shrink-0" />
-                      <span>Limpieza de butacas</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 shrink-0" />
-                      <span>Aspirado de alfombras</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 shrink-0" />
-                      <span>Limpieza de techo</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 shrink-0" />
-                      <span>Limpieza superficial por los plasticos</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+
 
               <Card
                 className="animate-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-sky-400 group"
@@ -520,32 +459,7 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              <Card
-                className="animate-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-sky-400 group"
-                style={{ transitionDelay: "0.3s" }}
-              >
-                <CardHeader>
-                  <Wrench className="h-10 w-10 text-sky-500 mb-2 group-hover:animate-wiggle" />
-                  <CardTitle>Servicios Especializados</CardTitle>
-                  <CardDescription>Soluciones para necesidades específicas</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 shrink-0" />
-                      <span>Restauración de faros</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 shrink-0" />
-                      <span>Limpieza de motor</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 shrink-0" />
-                      <span>Tratamiento de cuero</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+
 
               <Card
                 className="animate-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-sky-400 group"
@@ -573,6 +487,10 @@ export default function Home() {
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2 shrink-0" />
                       <span>Horarios flexibles</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 shrink-0" />
+                      <span>Generamos facturas para seguros de hogar para el reintegro de limpieza de tapizados (ej. Banco Francés)</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -645,8 +563,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Calidad Premium</h3>
                 <p className="text-gray-600">
-                  Utilizamos exclusivamente productos de la más alta calidad que no dañan la pintura ni los materiales
-                  de su vehículo.
+                  Usamos exclusivamente productos de marca y de calidad que no daña tapizados de hogar y automotriz.
                 </p>
               </div>
 
@@ -974,13 +891,10 @@ export default function Home() {
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-gray-900">Restauracion y Limpieza de Alfombras</h3>
                   <p className="text-gray-600 mb-4">
-                    Restauramos alfombras de manera excelente. Dejandolas en perfecto y en su original estado.
+                    Limpieza de alfombra fijas y moviles de espacios grandes y chicos.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="bg-sky-100 text-sky-800 text-xs font-medium px-2.5 py-0.5 rounded">Alfombras</span>
-                    <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
-                      Reparacion
-                    </span>
                     <span className="bg-violet-100 text-violet-800 text-xs font-medium px-2.5 py-0.5 rounded">
                       Restauracion
                     </span>
@@ -989,39 +903,9 @@ export default function Home() {
               </div>
 
               {/* Proyecto 6 */}
-              <div
-                className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-hidden group"
-                style={{ transitionDelay: "0.5s" }}
-              >
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src="https://i.ibb.co/RkYXV8yx/Limpieza-de-motor.jpg"
-                    alt="Audi RS6 Detailing"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div className="p-4 text-white">
-                      <p className="font-medium">Maclean - Limpieza</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">Limpieza de Motor</h3>
-                  <p className="text-gray-600 mb-4">Restauración y Limpieza de Motor.</p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="bg-slate-100 text-slate-800 text-xs font-medium px-2.5 py-0.5 rounded">Motor</span>
-                    <span className="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">
-                      Limpieza
-                    </span>
-                    <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
-                      ¡Como nuevo!
-                    </span>
-                  </div>
-                </div>
-              </div>
 
-            {/* Proyecto 7 */}
+
+              {/* Proyecto 7 */}
               <div
                 className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-hidden group"
                 style={{ transitionDelay: "0.4s" }}
@@ -1043,7 +927,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold mb-2 text-gray-900">Limpieza Anti Acaros</h3>
                   <p className="text-gray-600 mb-4">
                     Eliminación de Ácaros y Tratamiento Antialérgico
-Eliminamos ácaros y alérgenos de tapizados, alfombras y colchones, aplicando productos especiales que previenen su reaparición. Ideal para personas alérgicas o con sensibilidad respiratoria.
+                    Eliminamos ácaros y alérgenos de tapizados, alfombras y colchones, aplicando productos especiales que previenen su reaparición. Ideal para personas alérgicas o con sensibilidad respiratoria.
 
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -1364,8 +1248,19 @@ Eliminamos ácaros y alérgenos de tapizados, alfombras y colchones, aplicando p
                     <path d="m19.07 4.93-14.14 14.14" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-lg mb-1">Eliminación de Olores</h3>
+                <h3 className="font-semibold text-lg mb-1">Tratamiento de mancha y control de olores</h3>
                 <p className="text-gray-600 text-sm">Tratamiento profesional anti-olores</p>
+              </div>
+
+              <div
+                className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 animate-hidden text-center"
+                style={{ transitionDelay: "0.9s" }}
+              >
+                <div className="bg-sky-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                  <Bus className="h-8 w-8 text-sky-600" />
+                </div>
+                <h3 className="font-semibold text-lg mb-1">Colectivos Larga Distancia</h3>
+                <p className="text-gray-600 text-sm">Limpieza de tapizados de colectivos de larga distancia</p>
               </div>
             </div>
           </div>
@@ -1556,7 +1451,7 @@ Eliminamos ácaros y alérgenos de tapizados, alfombras y colchones, aplicando p
                 Maclean
               </h3>
               <p className="text-gray-400 mb-4">
-                Servicio premium de limpieza y detailing para automóviles y tapizados de hogar.
+                Servicio premium de limpieza para automóviles y tapizados de hogar.
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">

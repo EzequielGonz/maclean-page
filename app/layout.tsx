@@ -10,7 +10,12 @@ export const metadata: Metadata = {
   title: "Maclean Tapizados - Servicio Premium de Limpieza",
   description:
     "Servicio profesional de limpieza, desinfección y blindaje de tapizados de hogar y automotriz. Cuidamos su vehículo como si fuera nuestro.",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: '/macleanhero.jpeg',
+    shortcut: '/macleanhero.jpeg',
+    apple: '/macleanhero.jpeg',
+  },
 }
 
 export default function RootLayout({
@@ -32,7 +37,7 @@ export default function RootLayout({
           `}
         </Script>
         {/* End Google Tag Manager */}
-        
+
         {/* Google tag (gtag.js) */}
         <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-16450971236" strategy="afterInteractive" />
         <Script id="google-tag" strategy="afterInteractive">
@@ -47,15 +52,15 @@ export default function RootLayout({
       <body className={inter.className}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
-          <iframe 
+          <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-56SZJ38R"
-            height="0" 
-            width="0" 
-            style={{display: 'none', visibility: 'hidden'}}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
-        
+
         {children}
       </body>
     </html>
