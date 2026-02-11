@@ -170,13 +170,13 @@ export default function Home() {
               href="#por-que-elegirnos"
               className="text-sm font-medium hover:text-sky-500 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-sky-500 after:transition-all hover:after:w-full"
             >
-              Por Qué Elegirnos
+              Por Que Elegirnos
             </Link>
             <Link
               href="#contacto"
               className="text-sm font-medium hover:text-sky-500 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-sky-500 after:transition-all hover:after:w-full"
             >
-              Contacto
+              Nuestro Contacto
             </Link>
           </nav>
           <Button
