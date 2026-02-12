@@ -6,7 +6,6 @@ import { CheckCircle, Shield, Sparkles, Timer, Wrench, MapPin, Phone, Bus } from
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import VideoTestimonial from "./components/video-testimonial"
 import ContactConversion from "./components/contact-conversion"
 
 
@@ -347,7 +346,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row gap-12 items-center">
               <div className="md:w-1/2 animate-hidden">
                 <Image
-                  src="https://i.ibb.co/rKb08F81/Quienes-somos.jpg"
+                  src="/macleanhero.jpeg"
                   alt="Equipo Maclean"
                   width={600}
                   height={400}
@@ -688,7 +687,7 @@ export default function Home() {
           </div>
           <div className="container relative">
             <div className="text-center mb-16 animate-hidden">
-              <h2 className="text-3xl font-bold tracking-tight">Nuestros Proyectos</h2>
+              <h2 className="text-3xl font-bold tracking-tight">Nuestros Trabajos</h2>
               <div className="w-20 h-1 bg-sky-500 mx-auto my-4 animate-width"></div>
               <p className="max-w-2xl mx-auto text-lg text-gray-600">
                 Algunos de nuestros trabajos más destacados que demuestran la calidad y dedicación que ponemos en cada
@@ -1275,21 +1274,33 @@ export default function Home() {
               <p className="max-w-2xl mx-auto text-lg text-gray-600 mb-8">
                 Escucha lo que nuestros clientes tienen que decir sobre nuestros servicios
               </p>
-              <div className="max-w-4xl mx-auto">
-                <VideoTestimonial
-                  videoUrls={[
-                    "/testimonio1.mp4",
-                    "/testimonio2.mp4",
-                    "/testimonio3.mp4",
-                  ]}
-                />
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
+                  <div
+                    key={num}
+                    className="animate-hidden group bg-gray-50 p-2 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300"
+                    style={{ transitionDelay: `${num * 0.1}s` }}
+                  >
+                    <div className="relative overflow-hidden rounded-xl bg-white aspect-[9/16] sm:aspect-auto">
+                      <Image
+                        src={`/reseñas/reseña${num}.png`}
+                        alt={`Reseña de cliente ${num}`}
+                        width={400}
+                        height={700}
+                        className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                      />
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="mt-8 text-center">
-                <blockquote className="italic text-xl text-gray-700 max-w-3xl mx-auto">
-                  "El servicio de Maclean superó todas mis expectativas. Mi auto quedó como nuevo y el equipo fue
-                  extremadamente profesional."
-                </blockquote>
-                <p className="mt-4 font-semibold">— Matias - Clientes Satisfechos</p>
+              <div className="mt-16 text-center">
+                <div className="inline-flex items-center gap-1 mb-4">
+                  {[1, 2, 3, 4, 5].map((s) => (
+                    <svg key={s} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" className="w-6 h-6">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
