@@ -177,6 +177,12 @@ export default function Home() {
             >
               Nuestro Contacto
             </Link>
+            <Link
+              href="/portafolio"
+              className="text-sm font-medium text-sky-600 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-sky-500 hover:text-sky-700 transition-colors"
+            >
+              Portafolio
+            </Link>
           </nav>
           <Button
             className="hidden md:inline-flex bg-green-600 hover:bg-green-700 flex items-center gap-2 transition-transform hover:scale-105"

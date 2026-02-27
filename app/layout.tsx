@@ -3,6 +3,7 @@ import "./globals.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import Script from "next/script"
+import CleaningLoader from "./components/CleaningLoader"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -61,6 +62,7 @@ export default function RootLayout({
         </noscript>
         {/* End Google Tag Manager (noscript) */}
 
+        <CleaningLoader />
         {children}
       </body>
     </html>
