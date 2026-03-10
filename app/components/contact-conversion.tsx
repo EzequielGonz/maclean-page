@@ -13,12 +13,14 @@ declare global {
 interface ContactConversionProps {
   whatsappNumber: string
   children: React.ReactNode
+  className?: string
 }
 
-export default function ContactConversion({ whatsappNumber, children }: ContactConversionProps) {
+export default function ContactConversion({ whatsappNumber, children, className }: ContactConversionProps) {
   const handleConversion = () => {
     // Google Ads conversion tracking
     if (typeof window !== "undefined" && window.gtag) {
+      console.log("Firing Google Ads conversion...");
       window.gtag('event', 'conversion', {
         'send_to': 'AW-16450971236/BnyECLeaiIYcEOTMt6Q9',
         'value': 1.0,
@@ -30,7 +32,7 @@ export default function ContactConversion({ whatsappNumber, children }: ContactC
   return (
     <Button
       size="lg"
-      className="bg-green-600 hover:bg-green-700 flex items-center gap-2 transition-transform hover:scale-105 shadow-lg hover:shadow-green-500/20"
+      className={className || "bg-green-600 hover:bg-green-700 flex items-center gap-2 transition-transform hover:scale-105 shadow-lg hover:shadow-green-500/20"}
       asChild
       onClick={handleConversion}
     >

@@ -10,20 +10,6 @@ interface BrandCarouselProps {
   }[]
 }
 
-interface ContactConversionProps {
-  whatsappNumber: string
-  children: React.ReactNode
-}
-
-export default function ContactConversion({ whatsappNumber, children }: ContactConversionProps) {
-  const handleConversion = () => {
-    // Google Ads conversion tracking
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "conversion", { send_to: "AW-16450971236/bM5zCIOHzs8ZEOTMt6Q9" })
-    }
-  }
-
-
 export default function BrandCarousel({ brands }: BrandCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)

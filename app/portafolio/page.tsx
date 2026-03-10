@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
+import ContactConversion from "../components/contact-conversion"
 
 const allProjects = [
     // --- Trabajos nuevos ---
@@ -143,17 +144,15 @@ export default function Portafolio() {
                     </nav>
 
                     {/* Botón WhatsApp */}
-                    <Button
+                    <ContactConversion
+                        whatsappNumber="5491138429873"
                         className="hidden md:inline-flex bg-green-600 hover:bg-green-700 flex items-center gap-2 transition-transform hover:scale-105"
-                        asChild
                     >
-                        <Link href="https://wa.me/5491138429873" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 animate-pulse">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                            </svg>
-                            Contáctanos
-                        </Link>
-                    </Button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 animate-pulse">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        Contáctanos
+                    </ContactConversion>
 
                     {/* Hamburger mobile */}
                     <button
@@ -184,9 +183,12 @@ export default function Portafolio() {
                         <Link href="/#por-que-elegirnos" className="text-sm font-medium hover:text-sky-500" onClick={() => setMenuOpen(false)}>Por Que Elegirnos</Link>
                         <Link href="/#contacto" className="text-sm font-medium hover:text-sky-500" onClick={() => setMenuOpen(false)}>Nuestro Contacto</Link>
                         <Link href="/portafolio" className="text-sm font-bold text-sky-600 border-b-2 border-sky-500 pb-1 w-fit" onClick={() => setMenuOpen(false)}>Portafolio</Link>
-                        <Link href="https://wa.me/5491138429873" target="_blank" className="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 transition-colors w-fit">
+                        <ContactConversion
+                            whatsappNumber="5491138429873"
+                            className="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 transition-colors w-fit"
+                        >
                             Contáctanos
-                        </Link>
+                        </ContactConversion>
                     </div>
                 )}
             </header>
@@ -377,18 +379,15 @@ export default function Portafolio() {
                         <p className="text-sky-100 text-lg mb-8 max-w-xl mx-auto">
                             Contactanos hoy y transformamos tu tapizado en algo que vas a amar.
                         </p>
-                        <Button
-                            size="lg"
+                        <ContactConversion
+                            whatsappNumber="5491138429873"
                             className="bg-white text-sky-600 hover:bg-sky-50 transition-transform hover:scale-105 shadow-lg inline-flex items-center gap-2"
-                            asChild
                         >
-                            <Link href="https://wa.me/5491138429873" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-green-600 animate-pulse">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                                </svg>
-                                Pedir Presupuesto por WhatsApp
-                            </Link>
-                        </Button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-green-600 animate-pulse">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                            Pedir Presupuesto por WhatsApp
+                        </ContactConversion>
                     </div>
                 </section>
             </main>
