@@ -4,6 +4,12 @@ import type React from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
+declare global {
+  interface Window {
+    gtag: (type: 'event', eventName: string, eventParams: object) => void;
+  }
+}
+
 interface ContactConversionProps {
   whatsappNumber: string
   children: React.ReactNode
@@ -13,7 +19,11 @@ export default function ContactConversion({ whatsappNumber, children }: ContactC
   const handleConversion = () => {
     // Google Ads conversion tracking
     if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "conversion", { send_to: "AW-16450971236/bM5zCIOHzs8ZEOTMt6Q9" })
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-16450971236/BnyECLeaiIYcEOTMt6Q9',
+        'value': 1.0,
+        'currency': 'ARS'
+      });
     }
   }
 
