@@ -21,10 +21,15 @@ export default function ContactConversion({ whatsappNumber, children, className 
     // Google Ads conversion tracking
     if (typeof window !== "undefined" && window.gtag) {
       console.log("Firing Google Ads conversion...");
+      // Conversion anterior
       window.gtag('event', 'conversion', {
         'send_to': 'AW-16450971236/BnyECLeaiIYcEOTMt6Q9',
         'value': 1.0,
         'currency': 'ARS'
+      });
+      // Nueva conversion
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-16450971236/-KsqCLGu2s4ZEOTMt6Q9'
       });
     }
   }
